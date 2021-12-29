@@ -1,0 +1,70 @@
+﻿program Lab1;
+uses crt;
+var k,s,s1,x,e,t,n:real;
+  Xy,Yy,f,a,p,m,u,Xx,Yx,i,o,v:integer;
+              r:boolean;
+begin 
+  textBackground(white); 
+  clrscr;
+  textcolor(black);
+  Xx:=4;
+  Yx:=3;  
+  i:=120;
+  o:=6;
+  gotoxy(49,11);
+  writeln('Таблица');
+  Xy:=38;
+  Yy:=12;
+  gotoxy(Xy,Yy);
+    writeln('_______________________________'); 
+    Yy:=Yy+1;
+    gotoxy(Xy,yy); 
+    writeln('|  X  |  Sнов  | Sстар  |Сравн|'); 
+    Yy:=Yy+1;
+    gotoxy(Xy,yy);
+    writeln('_______________________________');
+    Yy:=Yy+1;
+  repeat
+  gotoxy(1,2);
+  write('x=pi/a');  
+  gotoxy(Xx,Yx);
+  write('Введите a=');
+  readln(a);
+  Yx:=Yx+1;
+  p:=1;         
+  e:=0.0001;
+  x:=pi/a;
+  s:=-COS(x*pi/180);
+  f:=1;
+  repeat 
+    if f=3 then 
+           begin
+             f:=1;
+             n:=n*(-1);                     
+           end;  
+    p:=p+1;  
+    k:=p*x;
+    m:=p*p;   
+    n:=COS(k*pi/180)/m;     
+    s1:=s;
+    s:=s+n;       
+    f:=f+1;
+    t:=abs(s-s1);       
+  until t<=e;
+  r:=t<=e;    
+    gotoxy(Xy,yy);
+    writeln('|',x:3:3,'|',s:5:5,'|',s1:5:5,'|',r:5,'|'); 
+    Yy:=Yy+1;
+    gotoxy(Xy,yy);
+    writeln('_______________________________');
+    Yy:=Yy+1;
+    gotoxy(1,1);
+    write('Хотите продолжить?  1-да, 0-нет: ');
+    gotoxy(i,o);
+    read(u);
+    o:=o+1;
+    until u=0;
+    v:=Yy+2;
+    gotoxy(1,v);
+  readkey;
+end.

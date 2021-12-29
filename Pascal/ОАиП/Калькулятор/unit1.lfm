@@ -1,0 +1,101 @@
+object Form1: TForm1
+  Left = 388
+  Height = 240
+  Top = 165
+  Width = 320
+  Caption = 'Простой калькулятор'
+  ClientHeight = 240
+  ClientWidth = 320
+  Color = clForm
+  OnCreate = FormCreate
+  LCLVersion = '1.6.4.0'
+  object Edit1: TEdit
+    Left = 40
+    Height = 23
+    Top = 27
+    Width = 96
+    OnKeyPress = EditKeyPress
+    TabOrder = 0
+    Text = 'Edit1'
+  end
+  object Edit2: TEdit
+    Left = 184
+    Height = 23
+    Top = 27
+    Width = 104
+    OnKeyPress = EditKeyPress
+    TabOrder = 1
+    Text = 'Edit2'
+  end
+  object Label1: TLabel
+    Left = 128
+    Height = 15
+    Top = 72
+    Width = 34
+    Caption = 'Label1'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 32
+    Height = 25
+    Top = 136
+    Width = 24
+    Caption = '+'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 56
+    Height = 25
+    Top = 136
+    Width = 24
+    Caption = '*'
+    OnClick = Button2Click
+    TabOrder = 3
+  end
+  object Button3: TButton
+    Left = 32
+    Height = 25
+    Top = 160
+    Width = 24
+    Caption = '-'
+    OnClick = Button3Click
+    TabOrder = 4
+  end
+  object Button4: TButton
+    Left = 56
+    Height = 25
+    Top = 160
+    Width = 24
+    Caption = '/'
+    OnClick = Button4Click
+    TabOrder = 5
+  end
+  object Button5: TButton
+    Left = 208
+    Height = 25
+    Top = 160
+    Width = 75
+    Caption = 'Выход'
+    OnClick = Button5Click
+    TabOrder = 6
+  end
+  object Button6: TButton
+    Left = 32
+    Height = 25
+    Top = 104
+    Width = 75
+    Caption = 'Сброс'
+    OnClick = Button6Click
+    TabOrder = 7
+  end
+  object Button7: TButton
+    Left = 208
+    Height = 25
+    Top = 104
+    Width = 96
+    Caption = 'О программе'
+    OnClick = Button7Click
+    TabOrder = 8
+  end
+end

@@ -1,0 +1,19 @@
+object Form2: TForm2
+  Left = 776
+  Height = 300
+  Top = 268
+  Width = 400
+  Caption = 'Form2'
+  ClientHeight = 300
+  ClientWidth = 400
+  DesignTimePPI = 120
+  LCLVersion = '2.0.6.0'
+  object Image1: TImage
+    Left = 0
+    Height = 301
+    Top = 0
+    Width = 401
+    OnClick = Image1Click
+    Stretch = True
+  end
+end
